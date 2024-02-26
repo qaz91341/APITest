@@ -3,7 +3,7 @@ using System;
 using System.Net.Http;
 using System.Web.Mvc;
 using WebApplication2.Models;
-using WebApplication2.Data; // 引入此命名空間以便使用 ApplicationDbContext
+using WebApplication2.Data;
 using System.Collections.Generic;
 using System.Linq;
 
