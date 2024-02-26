@@ -9,7 +9,7 @@ namespace WebApplication2.Data
 {
     public class ApplicationDbContext : DbContext
     {
-        public ApplicationDbContext() : base("data source=DESKTOP-LI52F38;initial catalog=API;Integrated Security=True;") {}
+        public ApplicationDbContext() : base("data source= name;initial catalog=API;Integrated Security=True;") {}
 
         public DbSet<APIDataModel> APIData { get; set; }
     }
