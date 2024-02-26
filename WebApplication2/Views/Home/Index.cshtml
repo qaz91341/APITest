@@ -1,0 +1,31 @@
+﻿@model List<WebApplication2.Models.APIDataModel>
+
+<h2>CAS最新通過與終止</h2>
+
+<form action="@Url.Action("SendRequest", "Home")" method="post">
+    <input type="submit" value="更新資料" />
+</form>
+
+@if (Model != null && Model.Any())
+{
+    @ViewBag.Message
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>公告主旨</th>
+            <th>公告內容</th>
+        </tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.oid</td>
+                <td>@item.Marst_Title</td>
+                <td>@item.Marst_Content</td>
+            </tr>
+        }
+    </table>
+}
+else
+{
+    <p>@ViewBag.Message</p>
+}
